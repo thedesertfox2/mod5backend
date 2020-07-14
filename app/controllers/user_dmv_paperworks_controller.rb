@@ -1,0 +1,2 @@
+class UserDmvPaperworksController < ApplicationController
+end
