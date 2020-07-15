@@ -1,7 +1,6 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        user = User.all
-        render json: user
+        render json: User.all.as_json({:except => [:password_digest]})
     end
 end
