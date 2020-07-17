@@ -10,17 +10,48 @@ class Api::V1::UsersController < ApplicationController
 
     def getquestions
         questions = []
-        question = []
-        hash = {}
+        
+        question = ''
+        finalArr = []
+        
+
         if params[:id] === 'All'
             questions = Question.all
         else
             questions = Question.all.sample(params[:id].to_i)
         end
+
         questions.each do |q|
-            question = q.question
+            choices = []
+            correct = ''
+            incorrect = []
+            
+            # byebug
+            
+
+            choices = Choice.where(question_id: q.id)
+            # byebug
+            choices.each do |c|
+                if c.iscorrect === true
+                    correct = c.choice_text
+                elsif c.iscorrect === false
+                    incorrect.push(c.choice_text)
+                end
+            end
+            
+            
+
+            finalArr.push(question = [ 
+                'question' => q.question, 
+                'choices' => {
+                    'correct' => correct,
+                    'incorrect' => incorrect
+                }
+            ])
+            
+            
         end
-        byebug
-        render json: questions 
+        
+        render json: {question: finalArr} 
     end
 end
