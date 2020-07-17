@@ -14,4 +14,5 @@ alex = User.create(username: 'thedesertfox2', password: 'password', name: 'Alexa
 
 dmv1 = DmvPaperwork.create(name: 'CS-1', url: 'https://portal.ct.gov/DMV/Licenses/Licenses/Driving-Schools---Driver-Education-Certificate')
 
-udp1 = UserDmvPaperwork.create(user_id: alex.id, dmv_paperwork_id: dmv1.id)
+# udp1 = UserDmvPaperwork.create(user_id: alex.id, dmv_paperwork_id: dmv1.id)
+
