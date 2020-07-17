@@ -16,3 +16,18 @@ dmv1 = DmvPaperwork.create(name: 'CS-1', url: 'https://portal.ct.gov/DMV/License
 
 # udp1 = UserDmvPaperwork.create(user_id: alex.id, dmv_paperwork_id: dmv1.id)
 
+# scrape = Scraper.new
+
+# scrape.scrape_trivia_questions.each do |k, v|
+#     i = 0
+#     question = v['question']
+#     var = Question.create(question: question)
+#     while v['choices'].length > i do 
+#         var2 = v['choices'][i]
+#         Choice.create(question_id: var.id, choice_text: var2, iscorrect: false)
+#         i += 1
+#     end
+# end
+
+
+

@@ -9,31 +9,39 @@ class Scraper
         arr = []
         answers = []
         hash = {}
-        tns_url = 'https://www.quiz-maker.com/QG6NWOQ'
-
-        html = open(tns_url)
-
-        doc = Nokogiri::HTML(html)
+        trivia_url = 'https://www.quiz-maker.com/QG6NWOQ'
         
+
+        html1 = open(trivia_url)
+        
+
+        doc = Nokogiri::HTML(html1)
+        
+
         arr = doc.css('#quiz-tabs')
+        
+        
 
         (1...137).each do |num| 
             question = arr.css("div[tid=#{num}]").css('div.qp_qi').inner_text
             answers = arr.css("div[tid=#{num}]").css('span').collect(&:text)
+
+            
             answers.pop
             hash[num] = {'question' => question, 'choices' => answers}
             # qa.each do |qqaa|
             #     puts qqaa
             # end
-            
+            # [rid=#{num}]
             
             # binding.pry
             
         end
-        pp hash
+        # pp hash
+        return hash
     end
+
 end
 
-scrape = Scraper.new
 
-scrape.scrape_trivia_questions
+
