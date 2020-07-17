@@ -1,2 +1,0 @@
-class Correct < ApplicationRecord
-end

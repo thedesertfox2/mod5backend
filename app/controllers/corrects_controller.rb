@@ -1,2 +1,0 @@
-class CorrectsController < ApplicationController
-end
