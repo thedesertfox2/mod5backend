@@ -9,6 +9,7 @@
 User.destroy_all
 DmvPaperwork.destroy_all
 UserDmvPaperwork.destroy_all
+Test.destroy_all
 
 alex = User.create(username: 'thedesertfox2', password: 'password', name: 'Alexander Gautherin', dob: '08/11/1994', age: 25)
 
