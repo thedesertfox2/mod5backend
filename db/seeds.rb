@@ -14,6 +14,7 @@ Test.destroy_all
 alex = User.create(username: 'thedesertfox2', password: 'password', name: 'Alexander Gautherin', dob: '08/11/1994', age: 25)
 
 dmv1 = DmvPaperwork.create(name: 'CS-1', url: 'https://portal.ct.gov/DMV/Licenses/Licenses/Driving-Schools---Driver-Education-Certificate')
+dmv2 = DmvPaperwork.create(name: 'Car Insurance Card', url: 'https://i2.wp.com/www.safecar.info/wp-content/uploads/2019/08/free-auto-insurance-card-template.jpg?fit=1196%2C720&ssl=1')
 
 # udp1 = UserDmvPaperwork.create(user_id: alex.id, dmv_paperwork_id: dmv1.id)
 
