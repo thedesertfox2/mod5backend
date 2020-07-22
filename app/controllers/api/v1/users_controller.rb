@@ -1,11 +1,11 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        render json: User.all.as_json({:except => [:password_digest]})
+        render json: User.all.as_json(:except => [:password_digest], :include => [:dmv_paperworks])
     end
 
     def getpaperworks
-        render json: UserDmvPaperwork.find_by(user_id: params[:id])
+        render json: UserDmvPaperwork.where(user_id: params[:id])
     end
 
     def getquestions
