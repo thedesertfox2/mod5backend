@@ -56,7 +56,8 @@ ActiveRecord::Schema.define(version: 2020_07_17_153234) do
     t.string "password_digest"
     t.string "name"
     t.date "dob"
-    t.integer "age"
+    t.boolean "has_permit"
+    t.boolean "has_license"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

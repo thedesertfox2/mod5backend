@@ -5,7 +5,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :password_digest
       t.string :name
       t.date :dob
-      t.integer :age
+      t.boolean :has_permit
+      t.boolean :has_license
 
       t.timestamps
     end
