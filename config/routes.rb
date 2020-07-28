@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :parkings
   resources :tests
   resources :choices
   resources :questions, only: :index

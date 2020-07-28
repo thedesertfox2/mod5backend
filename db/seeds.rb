@@ -16,6 +16,13 @@ alex = User.create(username: 'thedesertfox2', password: 'password', name: 'Alexa
 dmv1 = DmvPaperwork.create(name: 'CS-1', url: 'https://portal.ct.gov/DMV/Licenses/Licenses/Driving-Schools---Driver-Education-Certificate')
 dmv2 = DmvPaperwork.create(name: 'Car Insurance Card', url: 'https://i2.wp.com/www.safecar.info/wp-content/uploads/2019/08/free-auto-insurance-card-template.jpg?fit=1196%2C720&ssl=1')
 
+Parking.create(name: 'Pull-In Parking on the Left', url: 'https://www.youtube.com/watch?v=uG0haUpAEX4')
+Parking.create(name: 'Pull-In Parking on the Right', url: 'https://www.youtube.com/watch?v=aUhqSXGsIS4')
+Parking.create(name: 'Back-In Parking on the Right', url: 'https://www.youtube.com/watch?v=iPCNT9o7y5I')
+Parking.create(name: 'Back-In Parking on the Left', url: 'https://www.youtube.com/watch?v=pCzcuWfTo7w')
+Parking.create(name: 'Parallel Parking', url: 'https://www.youtube.com/watch?v=UQCSA1rTKvY')
+Parking.create(name: 'Three-Point Turns', url: 'https://www.youtube.com/watch?v=fwgC27ExMgU')
+
 # udp1 = UserDmvPaperwork.create(user_id: alex.id, dmv_paperwork_id: dmv1.id)
 
 # scrape = Scraper.new
