@@ -10,11 +10,18 @@ User.destroy_all
 DmvPaperwork.destroy_all
 UserDmvPaperwork.destroy_all
 Test.destroy_all
+Parking.destroy_all
 
 alex = User.create(username: 'thedesertfox2', password: 'password', name: 'Alexander Gautherin', dob: '08/11/1994', has_permit: false, has_license: false)
 
-dmv1 = DmvPaperwork.create(name: 'CS-1', url: 'https://portal.ct.gov/DMV/Licenses/Licenses/Driving-Schools---Driver-Education-Certificate')
-dmv2 = DmvPaperwork.create(name: 'Car Insurance Card', url: 'https://i2.wp.com/www.safecar.info/wp-content/uploads/2019/08/free-auto-insurance-card-template.jpg?fit=1196%2C720&ssl=1')
+DmvPaperwork.create(name: 'Birth Certificate OR Passport', description: "Must be original. Cannot be laminated!")
+DmvPaperwork.create(name: 'Social Security Card', description: "Must be original. Cannot be laminated!")
+DmvPaperwork.create(name: 'Piece of Mail 1')
+DmvPaperwork.create(name: 'Piece of Mail 2')
+DmvPaperwork.create(name: 'Vision Test', description: "Glasses/Contact Lenses OR I don't need vision correction.")
+DmvPaperwork.create(name: '$40 Test Fee', description: "Cash/Check/Visa/Mastercard")
+DmvPaperwork.create(name: "$19 Fee for Learner's Permit", description: "Cash/Check/Visa/Mastercard")
+DmvPaperwork.create(name: 'Notarized and signed parental consent form', description: "Must be original copy.")
 
 Parking.create(name: 'Pull-In Parking on the Left', url: 'https://www.youtube.com/watch?v=uG0haUpAEX4')
 Parking.create(name: 'Pull-In Parking on the Right', url: 'https://www.youtube.com/watch?v=aUhqSXGsIS4')

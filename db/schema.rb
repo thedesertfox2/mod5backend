@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_023621) do
 
   create_table "dmv_paperworks", force: :cascade do |t|
     t.string "name"
-    t.string "url"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
